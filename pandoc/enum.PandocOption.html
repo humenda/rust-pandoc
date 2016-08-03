@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PandocOption` enum in crate `pandoc`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PandocOption">
+
+    <title>pandoc::PandocOption - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>pandoc</a></p><script>window.sidebarCurrent = {name: 'PandocOption', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>pandoc</a>::<wbr><a class='enum' href=''>PandocOption</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-96' class='srclink' href='../src/pandoc/src/lib.rs.html#91-246' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum PandocOption {
+    To(<a class='enum' href='../pandoc/enum.OutputFormatExt.html' title='pandoc::OutputFormatExt'>OutputFormatExt</a>),
+    DataDir(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    Strict,
+    ParseRaw,
+    Smart,
+    OldDashes,
+    BaseHeaderLevel(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    IndentedCodeClasses(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    Filter(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    Normalize,
+    PreserveTabs,
+    TabStop(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    TrackChanges(<a class='enum' href='../pandoc/enum.TrackChanges.html' title='pandoc::TrackChanges'>TrackChanges</a>),
+    ExtractMedia(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    Standalone,
+    Template(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    Meta(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    Var(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    PrintDefaultTemplate(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    PrintDefaultDataFile(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    NoWrap,
+    Columns(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    TableOfContents,
+    TableOfContentsDepth(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    NoHighlight,
+    HighlightStyle(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    IncludeInHeader(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    IncludeBeforeBody(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    IncludeAfterBody(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    SelfContained,
+    Offline,
+    Html5,
+    HtmlQTags,
+    Ascii,
+    ReferenceLinks,
+    AtxHeaders,
+    Chapters,
+    NumberSections,
+    NumberOffset(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;),
+    NoTexLigatures,
+    Listings,
+    Incremental,
+    SlideLevel(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    SectionDivs,
+    DefaultImageExtension(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    EmailObfuscation(<a class='enum' href='../pandoc/enum.EmailObfuscation.html' title='pandoc::EmailObfuscation'>EmailObfuscation</a>),
+    IdPrefix(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    TitlePrefix(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    Css(<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>),
+    ReferenceOdt(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    ReferenceDocx(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    EpubStylesheet(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    EpubCoverImage(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    EpubMetadata(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    EpubEmbedFont(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    EpubChapterLevel(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    LatexEngine(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    LatexEngineOpt(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    Bibliography(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    Csl(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    CitationAbbreviations(<a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>),
+    Natbib,
+    Biblatex,
+    LatexMathML(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    AsciiMathML(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    MathML(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    MimeTex(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    WebTex(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    JsMath(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    MathJax(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    Katex(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>&gt;),
+    KatexStylesheet(<a class='type' href='../pandoc/type.URL.html' title='pandoc::URL'>URL</a>),
+    GladTex,
+    Trace,
+    DumpArgs,
+    IgnoreArgs,
+    Verbose,
+}</pre><h2 class='variants'>Variants</h2>
+<table class='variants_table'><tr><td id='variant.To'><code>To</code></td><td><div class='docblock'><p>-t FORMAT  --to=FORMAT</p>
+</div></td><td></td></tr><tr><td id='variant.DataDir'><code>DataDir</code></td><td><div class='docblock'><p>--data-dir=DIRECTORY</p>
+</div></td><td></td></tr><tr><td id='variant.Strict'><code>Strict</code></td><td><div class='docblock'><p>--strict</p>
+</div></td><td></td></tr><tr><td id='variant.ParseRaw'><code>ParseRaw</code></td><td><div class='docblock'><p>-R --parse-raw</p>
+</div></td><td></td></tr><tr><td id='variant.Smart'><code>Smart</code></td><td><div class='docblock'><p>-S --smart</p>
+</div></td><td></td></tr><tr><td id='variant.OldDashes'><code>OldDashes</code></td><td><div class='docblock'><p>--old-dashes</p>
+</div></td><td></td></tr><tr><td id='variant.BaseHeaderLevel'><code>BaseHeaderLevel</code></td><td><div class='docblock'><p>--base-header-level=NUMBER</p>
+</div></td><td></td></tr><tr><td id='variant.IndentedCodeClasses'><code>IndentedCodeClasses</code></td><td><div class='docblock'><p>--indented-code-classes=STRING</p>
+</div></td><td></td></tr><tr><td id='variant.Filter'><code>Filter</code></td><td><div class='docblock'><p>-F PROGRAM --filter=PROGRAM</p>
+</div></td><td></td></tr><tr><td id='variant.Normalize'><code>Normalize</code></td><td><div class='docblock'><p>--normalize</p>
+</div></td><td></td></tr><tr><td id='variant.PreserveTabs'><code>PreserveTabs</code></td><td><div class='docblock'><p>-p --preserve-tabs</p>
+</div></td><td></td></tr><tr><td id='variant.TabStop'><code>TabStop</code></td><td><div class='docblock'><p>--tab-stop=NUMBER</p>
+</div></td><td></td></tr><tr><td id='variant.TrackChanges'><code>TrackChanges</code></td><td><div class='docblock'><p>--track-changes=accept|reject|all</p>
+</div></td><td></td></tr><tr><td id='variant.ExtractMedia'><code>ExtractMedia</code></td><td><div class='docblock'><p>--extract-media=PATH</p>
+</div></td><td></td></tr><tr><td id='variant.Standalone'><code>Standalone</code></td><td><div class='docblock'><p>-s --standalone</p>
+</div></td><td></td></tr><tr><td id='variant.Template'><code>Template</code></td><td><div class='docblock'><p>--template=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.Meta'><code>Meta</code></td><td><div class='docblock'><p>-M KEY[:VALUE] --metadata=KEY[:VALUE]</p>
+</div></td><td></td></tr><tr><td id='variant.Var'><code>Var</code></td><td><div class='docblock'><p>-V KEY[:VALUE] --variable=KEY[:VALUE]</p>
+</div></td><td></td></tr><tr><td id='variant.PrintDefaultTemplate'><code>PrintDefaultTemplate</code></td><td><div class='docblock'><p>-D FORMAT --print-default-template=FORMAT</p>
+</div></td><td></td></tr><tr><td id='variant.PrintDefaultDataFile'><code>PrintDefaultDataFile</code></td><td><div class='docblock'><p>--print-default-data-file=FILE</p>
+</div></td><td></td></tr><tr><td id='variant.NoWrap'><code>NoWrap</code></td><td><div class='docblock'><p>--no-wrap</p>
+</div></td><td></td></tr><tr><td id='variant.Columns'><code>Columns</code></td><td><div class='docblock'><p>--columns=NUMBER</p>
+</div></td><td></td></tr><tr><td id='variant.TableOfContents'><code>TableOfContents</code></td><td><div class='docblock'><p>--toc, --table-of-contents</p>
+</div></td><td></td></tr><tr><td id='variant.TableOfContentsDepth'><code>TableOfContentsDepth</code></td><td><div class='docblock'><p>--toc-depth=NUMBER</p>
+</div></td><td></td></tr><tr><td id='variant.NoHighlight'><code>NoHighlight</code></td><td><div class='docblock'><p>--no-highlight</p>
+</div></td><td></td></tr><tr><td id='variant.HighlightStyle'><code>HighlightStyle</code></td><td><div class='docblock'><p>--highlight-style=STYLE</p>
+</div></td><td></td></tr><tr><td id='variant.IncludeInHeader'><code>IncludeInHeader</code></td><td><div class='docblock'><p>-H FILENAME --include-in-header=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.IncludeBeforeBody'><code>IncludeBeforeBody</code></td><td><div class='docblock'><p>-B FILENAME --include-before-body=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.IncludeAfterBody'><code>IncludeAfterBody</code></td><td><div class='docblock'><p>-A FILENAME --include-after-body=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.SelfContained'><code>SelfContained</code></td><td><div class='docblock'><p>--self-contained</p>
+</div></td><td></td></tr><tr><td id='variant.Offline'><code>Offline</code></td><td><div class='docblock'><p>--offline</p>
+</div></td><td></td></tr><tr><td id='variant.Html5'><code>Html5</code></td><td><div class='docblock'><p>-5 --html5</p>
+</div></td><td></td></tr><tr><td id='variant.HtmlQTags'><code>HtmlQTags</code></td><td><div class='docblock'><p>--html-q-tags</p>
+</div></td><td></td></tr><tr><td id='variant.Ascii'><code>Ascii</code></td><td><div class='docblock'><p>--ascii</p>
+</div></td><td></td></tr><tr><td id='variant.ReferenceLinks'><code>ReferenceLinks</code></td><td><div class='docblock'><p>--reference-links</p>
+</div></td><td></td></tr><tr><td id='variant.AtxHeaders'><code>AtxHeaders</code></td><td><div class='docblock'><p>--atx-headers</p>
+</div></td><td></td></tr><tr><td id='variant.Chapters'><code>Chapters</code></td><td><div class='docblock'><p>--chapters</p>
+</div></td><td></td></tr><tr><td id='variant.NumberSections'><code>NumberSections</code></td><td><div class='docblock'><p>-N --number-sections</p>
+</div></td><td></td></tr><tr><td id='variant.NumberOffset'><code>NumberOffset</code></td><td><div class='docblock'><p>--number-offset=NUMBERS</p>
+</div></td><td></td></tr><tr><td id='variant.NoTexLigatures'><code>NoTexLigatures</code></td><td><div class='docblock'><p>--no-tex-ligatures</p>
+</div></td><td></td></tr><tr><td id='variant.Listings'><code>Listings</code></td><td><div class='docblock'><p>--listings</p>
+</div></td><td></td></tr><tr><td id='variant.Incremental'><code>Incremental</code></td><td><div class='docblock'><p>-i --incremental</p>
+</div></td><td></td></tr><tr><td id='variant.SlideLevel'><code>SlideLevel</code></td><td><div class='docblock'><p>--slide-level=NUMBER</p>
+</div></td><td></td></tr><tr><td id='variant.SectionDivs'><code>SectionDivs</code></td><td><div class='docblock'><p>--section-divs</p>
+</div></td><td></td></tr><tr><td id='variant.DefaultImageExtension'><code>DefaultImageExtension</code></td><td><div class='docblock'><p>--default-image-extension=extension</p>
+</div></td><td></td></tr><tr><td id='variant.EmailObfuscation'><code>EmailObfuscation</code></td><td><div class='docblock'><p>--email-obfuscation=none|javascript|references</p>
+</div></td><td></td></tr><tr><td id='variant.IdPrefix'><code>IdPrefix</code></td><td><div class='docblock'><p>--id-prefix=STRING</p>
+</div></td><td></td></tr><tr><td id='variant.TitlePrefix'><code>TitlePrefix</code></td><td><div class='docblock'><p>-T STRING --title-prefix=STRING</p>
+</div></td><td></td></tr><tr><td id='variant.Css'><code>Css</code></td><td><div class='docblock'><p>-c URL --css=URL</p>
+</div></td><td></td></tr><tr><td id='variant.ReferenceOdt'><code>ReferenceOdt</code></td><td><div class='docblock'><p>--reference-odt=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.ReferenceDocx'><code>ReferenceDocx</code></td><td><div class='docblock'><p>--reference-docx=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.EpubStylesheet'><code>EpubStylesheet</code></td><td><div class='docblock'><p>--epub-stylesheet=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.EpubCoverImage'><code>EpubCoverImage</code></td><td><div class='docblock'><p>--epub-cover-image=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.EpubMetadata'><code>EpubMetadata</code></td><td><div class='docblock'><p>--epub-metadata=FILENAME</p>
+</div></td><td></td></tr><tr><td id='variant.EpubEmbedFont'><code>EpubEmbedFont</code></td><td><div class='docblock'><p>--epub-embed-font=FILE</p>
+</div></td><td></td></tr><tr><td id='variant.EpubChapterLevel'><code>EpubChapterLevel</code></td><td><div class='docblock'><p>--epub-chapter-level=NUMBER</p>
+</div></td><td></td></tr><tr><td id='variant.LatexEngine'><code>LatexEngine</code></td><td><div class='docblock'><p>--latex-engine=PROGRAM</p>
+</div></td><td></td></tr><tr><td id='variant.LatexEngineOpt'><code>LatexEngineOpt</code></td><td><div class='docblock'><p>--latex-engine-opt=STRING</p>
+</div></td><td></td></tr><tr><td id='variant.Bibliography'><code>Bibliography</code></td><td><div class='docblock'><p>--bibliography=FILE</p>
+</div></td><td></td></tr><tr><td id='variant.Csl'><code>Csl</code></td><td><div class='docblock'><p>--csl=FILE</p>
+</div></td><td></td></tr><tr><td id='variant.CitationAbbreviations'><code>CitationAbbreviations</code></td><td><div class='docblock'><p>--citation-abbreviations=FILE</p>
+</div></td><td></td></tr><tr><td id='variant.Natbib'><code>Natbib</code></td><td><div class='docblock'><p>--natbib</p>
+</div></td><td></td></tr><tr><td id='variant.Biblatex'><code>Biblatex</code></td><td><div class='docblock'><p>--biblatex</p>
+</div></td><td></td></tr><tr><td id='variant.LatexMathML'><code>LatexMathML</code></td><td><div class='docblock'><p>-m[URL] --latexmathml[=URL], --asciimathml[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.AsciiMathML'><code>AsciiMathML</code></td><td><div class='docblock'><p>--asciimathml[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.MathML'><code>MathML</code></td><td><div class='docblock'><p>--mathml[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.MimeTex'><code>MimeTex</code></td><td><div class='docblock'><p>--mimetex[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.WebTex'><code>WebTex</code></td><td><div class='docblock'><p>--webtex[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.JsMath'><code>JsMath</code></td><td><div class='docblock'><p>--jsmath[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.MathJax'><code>MathJax</code></td><td><div class='docblock'><p>--mathjax[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.Katex'><code>Katex</code></td><td><div class='docblock'><p>--katex[=URL]</p>
+</div></td><td></td></tr><tr><td id='variant.KatexStylesheet'><code>KatexStylesheet</code></td><td><div class='docblock'><p>--katex-stylesheet=URL</p>
+</div></td><td></td></tr><tr><td id='variant.GladTex'><code>GladTex</code></td><td><div class='docblock'><p>-gladtex</p>
+</div></td><td></td></tr><tr><td id='variant.Trace'><code>Trace</code></td><td><div class='docblock'><p>--trace</p>
+</div></td><td></td></tr><tr><td id='variant.DumpArgs'><code>DumpArgs</code></td><td><div class='docblock'><p>--dump-args</p>
+</div></td><td></td></tr><tr><td id='variant.IgnoreArgs'><code>IgnoreArgs</code></td><td><div class='docblock'><p>--ignore-args</p>
+</div></td><td></td></tr><tr><td id='variant.Verbose'><code>Verbose</code></td><td><div class='docblock'><p>--verbose</p>
+</div></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../pandoc/enum.PandocOption.html' title='pandoc::PandocOption'>PandocOption</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-223' class='srclink' href='../src/pandoc/src/lib.rs.html#90' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../pandoc/enum.PandocOption.html' title='pandoc::PandocOption'>PandocOption</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-353' class='srclink' href='../src/pandoc/src/lib.rs.html#90' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../pandoc/enum.PandocOption.html' title='pandoc::PandocOption'>PandocOption</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "pandoc";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
